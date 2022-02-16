@@ -1,0 +1,72 @@
+/* colours */
+
+:root {
+  --white: rgb(255, 255, 255);
+  --red: rgb(231, 76, 60);
+  --green: rgb(46, 204, 113);
+  --blue: rgb(52, 152, 219);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+/* scroll progress */
+
+.scroll-progress {
+  position: fixed;
+  top: 50%;
+  right: 1rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  transform: translateY(-50%);
+}
+
+.scroll-progress__marker {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.scroll-progress__marker--active {
+  width: 1rem;
+  height: 1rem;
+  border: 0.25rem solid var(--white);
+  background-color: transparent;
+}
+
+/* scroll container */
+
+.scroll-container {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-container__item {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--white);
+  scroll-snap-align: start end;
+}
+
+.one {
+  background-color: var(--red);
+}
+.two {
+  background-color: var(--green);
+}
+.three {
+  background-color: var(--blue);
+}
